@@ -1,2 +1,2 @@
 # Maleykamusazadaportfolio
-Maleyka Musazada Portfolio
+MaleykaMusazadaPortfolio
