@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experience — Maleyka Musazada</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">
+      <div class="monogram">MM</div>
+      <div class="brand-name">Maleyka Musazada</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="profile.html">Profile &amp; Vision</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Experience</div>
+  <h1>Case Studies</h1>
+  <p class="proof">Four pieces of real work — the problem, what I decided, and what came of it.</p>
+
+  <div class="case case-lead">
+    <span class="lead-tag">Lead</span>
+    <h3 class="title">GE Aerospace — HR Job Simulation</h3>
+    <p class="beat-label">The Problem</p>
+    <p>GE Aerospace's virtual HR program (via Forage) required practical work across three real HR functions: process improvement, feedback delivery, and compensation analysis — not theory, but tasks a working HR analyst actually does.</p>
+    <p class="beat-label">What I Did</p>
+    <p>I applied a Lean/Value-Added lens to a real daily process to find waste. I wrote fact-based, growth-oriented feedback using the SOI model (Standard–Observation–Impact) for a underperforming team scenario. For Compensation &amp; Benefits, I used VLOOKUP and formulas across a real employee dataset to calculate compa-ratios and identify which employees most needed a pay increase.</p>
+    <p class="beat-label">What Came Of It</p>
+    <p>I completed all three tasks and earned the certificate. The compensation exercise in particular reframed how I see HR: not just policy, but a data-driven discipline where structure and empathy have to work together.</p>
+  </div>
+
+  <div class="case">
+    <h3 class="title">White &amp; Case — UK ESG Job Simulation</h3>
+    <p class="beat-label">The Problem</p>
+    <p>ESG due diligence was required on a corporate acquisition target — assessing greenwashing risk in the target company's public sustainability claims before a client proceeded with the deal.</p>
+    <p class="beat-label">What I Did</p>
+    <p>I flagged three red flags: vague sustainability language with litigation risk under the UK CMA Green Claims Code, reliance on carbon offsets instead of direct emission reductions, and transparency gaps masking larger non-compliance. Rather than recommend blocking the deal outright, I applied the OECD 6-step due diligence model and recommended a conditional go — proceed only if the highest-risk flags were neutralized through indemnities and carve-outs.</p>
+    <p class="beat-label">What Came Of It</p>
+    <p>I completed the simulation and earned the certificate. The output was a due-diligence memo with a conditional recommendation, structured to bring the target into compliance and protect the acquirer's ESG rating post-acquisition.</p>
+  </div>
+
+  <div class="case">
+    <h3 class="title">BCG — Climate &amp; Sustainability Job Simulation</h3>
+    <p class="beat-label">The Problem</p>
+    <p>Setting an emissions baseline for a company, then building a decarbonization roadmap — from raw data to boardroom-ready recommendations.</p>
+    <p class="beat-label">What I Did</p>
+    <p>I ran a carbon emissions baseline analysis and found that 86.4% of total emissions came from a single source: "Use of Sold Products" (Scope 3). I used that to prioritize the roadmap — electrification strategy first, since it hit the biggest hotspot directly, followed by supply-chain decarbonization and improved data transparency to move the company's CDP rating from B to A.</p>
+    <p class="beat-label">What Came Of It</p>
+    <p>I completed the simulation and earned the certificate. The concrete output was a hotspot-driven roadmap with three ranked priorities, plus a data-driven investor communication piece tied to the CDP rating gap.</p>
+  </div>
+
+  <div class="case">
+    <h3 class="title">FlyRank AI Internship — Workflow Audit &amp; Portfolio Sitemap</h3>
+    <p class="beat-label">The Problem</p>
+    <p>Week one required showing where my daily time actually goes. Separately, my portfolio's first sitemap sketch had six disconnected sections and didn't meet the brief's minimal, linear structure.</p>
+    <p class="beat-label">What I Did</p>
+    <p>I sorted 15 daily activities into four AI-collaboration categories and justified every decision. For the sitemap, I cut six sections down to four columns around a single home page, folding creative work into a supporting line rather than giving it its own column.</p>
+    <p class="beat-label">What Came Of It</p>
+    <p>Both were submitted. The audit showed I spread my time across more domains than I realized. The sitemap exercise forced a real decision about which parts of my background lead and which support — the same structure this site now uses.</p>
+  </div>
+
+  <div class="cta-strip">
+    <span>Want to talk about how this applies to your team?</span>
+    <a class="cta-btn" href="https://www.linkedin.com/in/maleyka-musazada-b9b483370" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+</main>
+
+<footer>© 2026 Maleyka Musazada · Baku, Azerbaijan (Open to Remote)</footer>
+
+</body>
+</html>
