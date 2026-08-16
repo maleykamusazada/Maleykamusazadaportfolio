@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile &amp; Vision — Maleyka Musazada</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">
+      <div class="monogram">MM</div>
+      <div class="brand-name">Maleyka Musazada</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="profile.html" class="active">Profile &amp; Vision</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Profile &amp; Vision</div>
+  <h1>Bio</h1>
+  <p>I'm building toward a career in HR analytics, ESG, and digital environmental work. My background bridges Human Resources and Environmental Engineering — a Master's thesis on AI applications in HRM, and a Bachelor's project assessing environmental risk in industrial enterprises. Right now I'm strengthening that foundation through hands-on simulation work (BCG, White &amp; Case, GE Aerospace) and an AI fluency internship at FlyRank, guided by my academic background in each area.</p>
+
+  <h2>Multidisciplinary Bridge</h2>
+  <p>Most HR analytics work treats "people data" and "environmental data" as separate disciplines. I don't. Both are ultimately about reading structured evidence — compa-ratios, emissions baselines, compliance gaps — and turning it into a decision someone with authority can act on. My Environmental Engineering background gives me the analytical discipline to trust data over instinct; my HR training gives me the judgment to know that not every number should become a policy. The intersection is where I do my best work.</p>
+
+  <h2>"Sükut Süfrəsi" — Philosophy</h2>
+  <p>Alongside HR and ESG work, I write. "Sükut Süfrəsi" ("The Table of Silence") is a multilingual philosophical dialogue exploring the space between language and silence — where words fall short and meaning has to be found in what's left unsaid. It's a different register from my analytical work, but the same underlying habit: paying close attention before drawing a conclusion.</p>
+
+  <div class="cta-strip">
+    <span>See how this background shows up in real work.</span>
+    <a class="cta-btn" href="experience.html">View My Experience</a>
+  </div>
+</main>
+
+<footer>© 2026 Maleyka Musazada · Baku, Azerbaijan (Open to Remote)</footer>
+
+</body>
+</html>
