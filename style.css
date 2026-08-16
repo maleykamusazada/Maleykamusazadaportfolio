@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --main: #1B4332;
+  --text: #1A1A1A;
+  --bg: #FAFAF8;
+  --accent: #C9A227;
+  --card: #FFFFFF;
+  --border: rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+.nav-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.monogram {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--main); color: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 14px;
+}
+.brand-name { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 16px; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+nav li { margin-right: 24px; }
+nav li:last-child { margin-right: 0; }
+nav a {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.3px; color: #555;
+  padding: 6px 2px; border-bottom: 2px solid transparent; white-space: nowrap;
+}
+nav a:hover, nav a.active { color: var(--main); border-bottom-color: var(--accent); }
+
+main { max-width: 780px; margin: 0 auto; padding: 56px 24px 80px; }
+
+.eyebrow {
+  font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--main); font-weight: 700; margin-bottom: 12px;
+}
+h1 { font-family: 'Libre Baskerville', serif; font-size: 40px; line-height: 1.25; font-weight: 700; margin-bottom: 20px; }
+h2 { font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 700; margin: 44px 0 16px; }
+h3 { font-family: 'Libre Baskerville', serif; font-size: 17px; font-weight: 700; color: var(--main); margin-bottom: 10px; }
+p { margin-bottom: 14px; color: #333; font-size: 15.5px; }
+
+.claim-box {
+  background: var(--main); color: var(--bg); padding: 28px 32px; border-radius: 10px;
+  font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; line-height: 1.4; margin: 28px 0;
+}
+.proof { font-size: 15px; color: #444; border-left: 3px solid var(--accent); padding-left: 16px; margin-bottom: 40px; }
+
+.card-grid { display: flex; flex-wrap: wrap; gap: 16px; margin: 32px 0 8px; }
+.nav-card { flex: 1 1 45%; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 22px; transition: border-color 0.15s; }
+.nav-card:hover { border-color: var(--main); }
+.nav-card .k { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; display: block; }
+.nav-card .t { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: 17px; }
+
+.case { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 26px 28px; margin-bottom: 20px; }
+.case-lead { border: 2px solid var(--accent); position: relative; }
+.lead-tag {
+  position: absolute; top: -11px; right: 20px; background: var(--accent); color: white;
+  font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 3px;
+}
+.case h3.title { font-size: 19px; margin-bottom: 14px; }
+.beat-label { font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: #999; font-weight: 700; margin-top: 14px; margin-bottom: 4px; }
+.beat-label:first-of-type { margin-top: 0; }
+.case p { font-size: 14px; margin-bottom: 0; }
+
+.skill-group { margin-bottom: 22px; }
+.skill-group h3 { margin-bottom: 8px; }
+.skill-group p { font-size: 14.5px; color: #444; }
+
+.edu-item { margin-bottom: 26px; }
+.edu-item .school { font-size: 13px; color: #777; margin-top: -6px; margin-bottom: 8px; }
+ul.cert-list { list-style: none; margin-top: 8px; }
+ul.cert-list li { font-size: 14px; color: #444; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px solid var(--border); }
+ul.cert-list li::before { content: ""; position: absolute; left: 0; top: 14px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+.cta-strip {
+  margin-top: 48px; background: var(--main); border-radius: 10px; padding: 24px 28px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+}
+.cta-strip span { color: var(--bg); font-size: 15px; font-weight: 500; }
+.cta-btn { background: var(--accent); color: white; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; padding: 10px 20px; border-radius: 6px; white-space: nowrap; }
+.cta-btn:hover { opacity: 0.9; }
+
+footer { text-align: center; padding: 30px 24px 50px; font-size: 12px; color: #999; }
