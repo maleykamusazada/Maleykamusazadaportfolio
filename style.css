@@ -107,3 +107,22 @@ ul.cert-list li::before { content: ""; position: absolute; left: 0; top: 14px; w
 .cta-btn:hover { opacity: 0.9; }
 
 footer { text-align: center; padding: 30px 24px 50px; font-size: 12px; color: #999; }
+.contact-section {
+  margin-top: 3rem;
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+.contact-section input,
+.contact-section textarea {
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #1A1A1A;
+  background: #FAFAF8;
+}
+.contact-section button {
+  align-self: flex-start;
+}
