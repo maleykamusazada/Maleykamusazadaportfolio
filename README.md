@@ -11,6 +11,6 @@ To explore or replicate this portfolio structure locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/maleykamusazada/maleykamusazadaportfolio.git](https://github.com/maleykamusazada/maleykamusazadaportfolio.git)
+   git clone https://github.com/maleykamusazada/maleykamusazadaportfolio.git](https://github.com/maleykamusazada/maleykamusazadaportfolio.git)
    cd maleykamusazadaportfolio
 
