@@ -1,98 +1,164 @@
-/* --- ƏSAS STİLLƏR --- */
+/* --- ZƏRİF SOLĞUN BOZ VƏ QIZILI DİZAYN --- */
+
 :root {
-  /* 1. Yeni Rəng Palitrası */
-  --bg-color: #f4f4f4;        /* Çox solğun, açıq boz fon */
-  --text-color: #555;         /* Tünd boz mətn (qara əvəzinə) */
-  --accent-gold: #c5a059;     /* Solğun, zərif qızılı vurğu (düymələr, başlıqlar üçün) */
-  --light-gold: #e0c99e;      /* Çox açıq qızılı (hover effektləri üçün) */
-  --border-color: #d0d0d0;    /* Açıq boz xətlər və haşiyələr */
-  --white: #ffffff;           /* Ağ rəng (qutular, kartlar üçün) */
+  --bg-color: #f7f7f5;        /* Çox solğun, yumşaq boz fon */
+  --text-color: #4a4a4a;      /* Tünd boz oxunaqlı mətn */
+  --accent-gold: #b39258;     /* Zərif solğun qızılı */
+  --light-gold: #d4bc91;      /* Açıq qızılı (hover üçün) */
+  --card-bg: #ffffff;         /* Ağ kart və bölmə fonu */
+  --border-color: #e2e2df;    /* Solğun haşiyə xətti */
 }
 
-/* Bütün səhifəyə tətbiq etmək */
+/* Bütün səhifə üçün əsas tənzimləmələr */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Your Selected Font', sans-serif; /* Şriftinizi saxlayın */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Başlıqlar (H1, H2, H3) üçün qızılı rəng */
-h1, h2, h3 {
+/* Header və Başlıqlar */
+header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
   color: var(--accent-gold);
-  border-color: var(--border-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
 }
 
-/* Linklər və düymələr üçün qızılı rəng */
+header p {
+  margin: 0;
+  color: #777;
+}
+
+/* Konteynerlər və Bölmələr */
+.container, section {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+h2, h3 {
+  color: var(--accent-gold);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+}
+
+/* Siyahılar və Markerlər */
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+li::marker {
+  color: var(--accent-gold);
+}
+
+/* Naviqasiya və Linklər */
 a {
   color: var(--accent-gold);
+  text-decoration: none;
 }
 
-button, .button-class {
-  background-color: var(--accent-gold);
-  color: var(--white);
-  border: 1px solid var(--accent-gold);
+a:hover {
+  color: var(--light-gold);
 }
 
-button:hover, .button-class:hover {
-  background-color: var(--light-gold);
-  border-color: var(--light-gold);
-}
-
-/* Siyahı markerləri üçün qızılı rəng (əgər şəkillərdəki kimi nöqtələr varsa) */
-ul li::marker, ol li::marker {
-  color: var(--accent-gold);
-}
-
-/* Aktiv menyu linkinin alt xəttinin qızılı olması (image_1.png-dəki kimi) */
 nav a.active {
   border-bottom: 2px solid var(--accent-gold);
   color: var(--accent-gold);
 }
 
-
-/* --- AI SÖHBƏT PƏNCƏRƏSİNİN STİLLƏRİ (image_3.png) --- */
-
-/* Söhbət qutusunun əsas konteyneri */
-.chat-widget-container {
-  border: 1px solid var(--border-color);
-  background-color: var(--white);
-  border-radius: 10px;
+/* Düymələr */
+button, .btn {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  border: 1px solid var(--accent-gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-/* Başlıq hissəsi (əvvəllər bənövşəyi idi) */
-.chat-header {
-  background-color: var(--accent-gold); /* Qızılı fon */
-  color: var(--white);                  /* Ağ mətn */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-/* İstifadəçi mesajı balonu */
-.user-message {
-  background-color: var(--bg-color); /* Boz fon */
-  color: var(--text-color);           /* Boz mətn */
-  border-radius: 8px;
-}
-
-/* AI cavab balonu */
-.ai-response {
-  background-color: var(--white);     /* Ağ fon */
-  color: var(--text-color);           /* Boz mətn */
-  border-left: 3px solid var(--accent-gold); /* Qızılı haşiyə */
-  border-radius: 8px;
-}
-
-/* Söhbət daxiletmə sahəsi və düyməsi */
-.chat-input-area {
-  border-top: 1px solid var(--border-color);
-}
-
-.chat-send-button {
-  background-color: var(--accent-gold); /* Qızılı düymə */
-  color: var(--white);
-}
-
-.chat-send-button:hover {
+button:hover, .btn:hover {
   background-color: var(--light-gold);
+  border-color: var(--light-gold);
 }
 
+/* --- AI SÖHBƏT PƏNCƏRƏSİ STİLİ --- */
+.chat-widget-container, .chat-section {
+  background: var(--card-bg);
+  border: 1px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.chat-header {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.chat-box {
+  height: 250px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-y: auto;
+  background: var(--bg-color);
+  margin-bottom: 1rem;
+}
+
+.user-message {
+  background-color: var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.ai-response {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.chat-input-area input:focus {
+  border-color: var(--accent-gold);
+}
