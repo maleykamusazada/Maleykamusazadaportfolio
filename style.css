@@ -1,15 +1,14 @@
-/* --- ZƏRİF SOLĞUN BOZ VƏ QIZILI DİZAYN --- */
+/* --- SOFT GRAY & ELEGANT GOLD PALETTE --- */
 
 :root {
-  --bg-color: #f7f7f5;        /* Çox solğun, yumşaq boz fon */
-  --text-color: #4a4a4a;      /* Tünd boz oxunaqlı mətn */
-  --accent-gold: #b39258;     /* Zərif solğun qızılı */
-  --light-gold: #d4bc91;      /* Açıq qızılı (hover üçün) */
-  --card-bg: #ffffff;         /* Ağ kart və bölmə fonu */
-  --border-color: #e2e2df;    /* Solğun haşiyə xətti */
+  --bg-color: #f7f7f5;        /* Soft, muted light gray background */
+  --text-color: #4a4a4a;      /* Dark gray readable text */
+  --accent-gold: #b39258;     /* Elegant pale gold */
+  --light-gold: #d4bc91;      /* Lighter gold for hover effects */
+  --card-bg: #ffffff;         /* Clean white for cards/sections */
+  --border-color: #e2e2df;    /* Subtle border lines */
 }
 
-/* Bütün səhifə üçün əsas tənzimləmələr */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -19,192 +18,187 @@ body {
   line-height: 1.6;
 }
 
-/* Header və Başlıqlar */
 header {
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 2rem 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
 }
 
-header h1 {
-  color: var(--accent-gold);
-  margin: 0 0 0.5rem 0;
-  font-size: 2rem;
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-header p {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.monogram {
+  background-color: var(--accent-gold);
+  color: white;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
   margin: 0;
-  color: #777;
+  padding: 0;
 }
 
-/* Konteynerlər və Bölmələr */
-.container, section {
-  background: var(--card-bg);
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+nav a.active, nav a:hover {
+  color: var(--accent-gold);
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+main {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Replaced the old dark green box with a clean gray/gold card style */
+.claim-box {
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-left: 4px solid var(--accent-gold);
+  color: var(--text-color);
   padding: 2rem;
-  margin: 1.5rem auto;
-  max-width: 900px;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
-h2, h3 {
+.proof {
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
   color: var(--accent-gold);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.4rem;
+  margin-top: 2rem;
 }
 
-/* Siyahılar və Markerlər */
-ul {
-  padding-left: 1.2rem;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 1rem;
 }
 
-li {
-  margin-bottom: 0.6rem;
-}
-
-li::marker {
-  color: var(--accent-gold);
-}
-
-/* Naviqasiya və Linklər */
-a {
-  color: var(--accent-gold);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--light-gold);
-}
-
-nav a.active {
-  border-bottom: 2px solid var(--accent-gold);
-  color: var(--accent-gold);
-}
-
-/* Düymələr */
-button, .btn {
-  background-color: var(--accent-gold);
-  color: #ffffff;
-  border: 1px solid var(--accent-gold);
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--light-gold);
-  border-color: var(--light-gold);
-}
-
-/* --- AI SÖHBƏT PƏNCƏRƏSİ STİLİ --- */
-.chat-widget-container, .chat-section {
+.nav-card {
   background: var(--card-bg);
-  border: 1px solid var(--accent-gold);
+  border: 1px solid var(--border-color);
+  padding: 1.2rem;
   border-radius: 8px;
-  padding: 1.5rem;
-}
-
-.chat-header {
-  background-color: var(--accent-gold);
-  color: #ffffff;
-  padding: 0.75rem 1rem;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.chat-box {
-  height: 250px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1rem;
-  overflow-y: auto;
-  background: var(--bg-color);
-  margin-bottom: 1rem;
-}
-
-.user-message {
-  background-color: var(--border-color);
-  color: var(--text-color);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.ai-response {
-  background-color: var(--card-bg);
-  color: var(--text-color);
-  border-left: 3px solid var(--accent-gold);
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  margin-bottom: 0.5rem;
-}
-
-.chat-input-area {
+  text-decoration: none;
   display: flex;
-  gap: 0.5rem;
-  border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
+  flex-direction: column;
+  transition: border-color 0.2s;
 }
 
-.chat-input-area input {
-  flex: 1;
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  outline: none;
-  background-color: var(--card-bg);
-  color: var(--text-color);
-}
-
-.chat-input-area input:focus {
+.nav-card:hover {
   border-color: var(--accent-gold);
 }
-/* --- BÜTÜN RƏNGLƏRİ SOLĞUN BOZ VƏ QIZILIYA ÇEVİRMƏK ÜÇÜN --- */
 
-:root {
-  --bg-color: #f7f7f5 !important;
-  --text-color: #4a4a4a !important;
-  --accent-gold: #b39258 !important;
-  --light-gold: #d4bc91 !important;
-  --card-bg: #ffffff !important;
-  --border-color: #e2e2df !important;
+.nav-card .k {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
 }
 
-/* Səhifənin ümumi fonu və mətni */
-body, html {
-  background-color: #f7f7f5 !important;
-  color: #4a4a4a !important;
+.nav-card .t {
+  color: var(--accent-gold);
+  font-weight: bold;
 }
 
-/* Şəkildə gördüyünüz tünd yaşıl sitat qutusunu solğun boz/qızılı etmək */
-div, section, article {
-  /* Əgər arxa fon tünd yaşıl rəngdədirsə, onu ağ və ya solğun boza çevirir */
-  background-color: inherit; 
+.cta-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
 }
 
-/* Tünd yaşıl fonlu elementləri hədəfləyirik (Sitat qutusu üçün) */
-[style*="background"], .hero-box, .quote-box {
-  background-color: #ffffff !important;
-  border: 1px solid #e2e2df !important;
-  color: #4a4a4a !important;
+.cta-btn {
+  background-color: var(--accent-gold);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-/* Şəkildəki bənövşəyi chat düyməsini qızılı rəngə çevirmək */
-.chat-widget-button, button, .chat-icon, [class*="chat"] {
-  background-color: #b39258 !important;
-  color: #ffffff !important;
+.cta-btn:hover {
+  background-color: var(--light-gold);
 }
 
-/* Başlıqlar və vurğular */
-h1, h2, h3, h4, h5, h6 {
-  color: #b39258 !important;
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 1rem;
 }
 
-/* Aktiv menyu alt xətti */
-nav a.active, .nav-link.active {
-  border-bottom-color: #b39258 !important;
-  color: #b39258 !important;
+.contact-section input, .contact-section textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  outline: none;
+}
+
+.contact-section input:focus, .contact-section textarea:focus {
+  border-color: var(--accent-gold);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid var(--border-color);
+  background: var(--card-bg);
 }
