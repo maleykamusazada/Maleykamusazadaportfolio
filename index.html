@@ -161,7 +161,45 @@
   mzaSend.addEventListener("click", mzaSendMessage);
   mzaInput.addEventListener("keypress", (e) => { if (e.key === "Enter") mzaSendMessage(); });
 </script>
-<!-- ==== AI CHAT ASSISTANT WIDGET (son) ==== -->
-
-</body>
-</html>
+<!-- ==== AI CHAT ASSISTANT WIDGET (updated to dark & deep gold) ==== -->
+<style>
+  #mza-chat-btn {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    background: #997a2b; color: white; border: none; border-radius: 50%;
+    width: 56px; height: 56px; font-size: 24px; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: background 0.2s;
+  }
+  #mza-chat-btn:hover {
+    background: #b8933b;
+  }
+  #mza-chat-box {
+    display: none; position: fixed; bottom: 90px; right: 20px; z-index: 1000;
+    width: 320px; max-width: 90vw; height: 420px; background: #12141c;
+    border: 1px solid #1f2333; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    flex-direction: column; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  #mza-chat-header {
+    background: #997a2b; color: white; padding: 12px; font-weight: 600; font-size: 14px;
+  }
+  #mza-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px; color: #a0a5b8; font-size: 14px;
+  }
+  #mza-chat-messages .msg { margin-bottom: 10px; line-height: 1.4; color: #ffffff; }
+  #mza-chat-messages .user { color: #f3e5ab; text-align: right; }
+  #mza-chat-input-row { display: flex; padding: 8px; background: #0b0c10; border-top: 1px solid #1f2333; }
+  #mza-chat-input {
+    flex: 1; border: 1px solid #1f2333; border-radius: 6px; padding: 8px; font-size: 14px;
+    background: #12141c; color: white; outline: none;
+  }
+  #mza-chat-input:focus {
+    border-color: #997a2b;
+  }
+  #mza-chat-send {
+    margin-left: 6px; background: #997a2b; color: white; border: none;
+    border-radius: 6px; padding: 8px 12px; cursor: pointer; font-weight: 600;
+  }
+  #mza-chat-send:hover {
+    background: #b8933b;
+  }
+</style>
