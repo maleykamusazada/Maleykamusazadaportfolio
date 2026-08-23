@@ -1,38 +1,35 @@
-/* --- LUXURY DARK & GOLD MODERN DESIGN --- */
-
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
+/* --- MODERN DARK & DEEP GOLD DESIGN --- */
 
 :root {
-  --bg-dark: #0a0a0a;          /* Deep rich black background */
-  --card-dark: #141414;        /* Dark gray/black for containers */
-  --gold-primary: #d4af37;     /* Elegant metallic gold */
-  --gold-light: #f3e5ab;       /* Soft glowing gold for highlights */
-  --text-black: #111111;       /* Deep black for specific high-contrast text */
-  --text-muted: #b0b0b0;       /* Muted gray for secondary text */
-  --border-gold: #3d3417;      /* Subtle dark gold border */
+  --bg-dark: #0b0c10;          /* Deep modern dark background */
+  --card-dark: #12141c;        /* Subtle dark container tone */
+  --gold-dark: #997a2b;       /* Rich, deep dark gold accent */
+  --gold-hover: #b8933b;      /* Slightly lighter gold for hover */
+  --text-main: #ffffff;        /* Pure white for primary headers */
+  --text-muted: #a0a5b8;       /* Clean muted gray for body text */
+  --border-dark: #1f2333;      /* Subtle border lines */
 }
 
 body {
   background-color: var(--bg-dark);
   color: var(--text-muted);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  letter-spacing: -0.01em;
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--card-dark);
-  border-bottom: 1px solid var(--border-gold);
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-dark);
   padding: 1.2rem 2rem;
-  backdrop-filter: blur(10px);
 }
 
 .nav-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -43,22 +40,22 @@ header {
 }
 
 .monogram {
-  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
-  color: var(--text-black);
-  width: 40px;
-  height: 40px;
+  background-color: var(--gold-dark);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-size: 14px;
 }
 
 .brand-name {
   font-weight: 600;
-  color: #ffffff;
-  font-size: 1.1rem;
+  color: var(--text-main);
+  font-size: 1.05rem;
 }
 
 nav ul {
@@ -73,98 +70,95 @@ nav a {
   text-decoration: none;
   color: var(--text-muted);
   font-size: 14px;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-weight: 400;
+  transition: color 0.2s;
 }
 
 nav a.active, nav a:hover {
-  color: var(--gold-primary);
-  border-bottom: 2px solid var(--gold-primary);
+  color: var(--text-main);
+  border-bottom: 2px solid var(--gold-dark);
   padding-bottom: 2px;
 }
 
 main {
-  max-width: 800px;
-  margin: 3.5rem auto;
+  max-width: 900px;
+  margin: 4rem auto;
   padding: 0 1.5rem;
 }
 
 .eyebrow {
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--gold-primary);
+  color: var(--gold-dark);
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Sitat qutusu: Qızılı fon, qara mətn */
+/* Main claim box styled cleanly in dark theme with deep gold border */
 .claim-box {
-  background: linear-gradient(135deg, #d4af37, #aa8c2c);
-  border: none;
-  color: var(--text-black);
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-left: 4px solid var(--gold-dark);
+  color: var(--text-main);
   padding: 2.5rem;
   border-radius: 12px;
-  font-size: 1.35rem;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  letter-spacing: -0.02em;
 }
 
 .proof {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 3rem;
-  line-height: 1.7;
+  max-width: 750px;
 }
 
 h2 {
-  color: var(--gold-primary);
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  border-bottom: 1px solid var(--border-gold);
-  padding-bottom: 0.6rem;
+  color: var(--text-main);
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--border-dark);
+  padding-bottom: 0.5rem;
   margin-top: 3rem;
+  font-weight: 600;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
   margin-top: 1.5rem;
 }
 
 .nav-card {
   background: var(--card-dark);
-  border: 1px solid var(--border-gold);
+  border: 1px solid var(--border-dark);
   padding: 1.5rem;
   border-radius: 10px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .nav-card:hover {
-  border-color: var(--gold-primary);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0,0, 0.4);
+  border-color: var(--gold-dark);
+  transform: translateY(-2px);
 }
 
 .nav-card .k {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 12px;
   color: var(--text-muted);
   margin-bottom: 8px;
 }
 
 .nav-card .t {
-  color: var(--gold-light);
+  color: var(--text-main);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .cta-strip {
@@ -172,31 +166,31 @@ h2 {
   justify-content: space-between;
   align-items: center;
   background: var(--card-dark);
-  border: 1px solid var(--border-gold);
+  border: 1px solid var(--border-dark);
   padding: 2rem;
   border-radius: 12px;
   margin: 3rem 0;
 }
 
 .cta-strip span {
-  color: #ffffff;
+  color: var(--text-main);
   font-weight: 500;
 }
 
 .cta-btn {
-  background-color: var(--gold-primary);
-  color: var(--text-black);
-  padding: 0.8rem 1.5rem;
+  background-color: var(--gold-dark);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   transition: background 0.2s;
 }
 
 .cta-btn:hover {
-  background-color: var(--gold-light);
+  background-color: var(--gold-hover);
 }
 
 .contact-section form {
@@ -208,17 +202,16 @@ h2 {
 
 .contact-section input, .contact-section textarea {
   padding: 1rem;
-  border: 1px solid var(--border-gold);
+  border: 1px solid var(--border-dark);
   border-radius: 8px;
   background: var(--card-dark);
-  color: #ffffff;
+  color: var(--text-main);
   outline: none;
   font-family: inherit;
 }
 
 .contact-section input:focus, .contact-section textarea:focus {
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-dark);
 }
 
 footer {
@@ -226,7 +219,6 @@ footer {
   padding: 2.5rem;
   color: var(--text-muted);
   font-size: 13px;
-  border-top: 1px solid var(--border-gold);
-  background: var(--card-dark);
+  border-top: 1px solid var(--border-dark);
+  background: var(--bg-dark);
 }
-
