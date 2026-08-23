@@ -84,7 +84,84 @@
   </div>
 </footer>
 
+<!-- ==== AI CHAT ASSISTANT WIDGET (başlanğıc) ==== -->
+<style>
+  #mza-chat-btn {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+    background: #6c5ce7; color: white; border: none; border-radius: 50%;
+    width: 56px; height: 56px; font-size: 24px; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  #mza-chat-box {
+    display: none; position: fixed; bottom: 90px; right: 20px; z-index: 1000;
+    width: 320px; max-width: 90vw; height: 420px; background: #1a1a2e;
+    border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    flex-direction: column; overflow: hidden; font-family: sans-serif;
+  }
+  #mza-chat-header {
+    background: #6c5ce7; color: white; padding: 12px; font-weight: bold;
+  }
+  #mza-chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px; color: #eee; font-size: 14px;
+  }
+  #mza-chat-messages .msg { margin-bottom: 10px; line-height: 1.4; }
+  #mza-chat-messages .user { color: #a29bfe; text-align: right; }
+  #mza-chat-input-row { display: flex; padding: 8px; background: #16162a; }
+  #mza-chat-input {
+    flex: 1; border: none; border-radius: 6px; padding: 8px; font-size: 14px;
+  }
+  #mza-chat-send {
+    margin-left: 6px; background: #6c5ce7; color: white; border: none;
+    border-radius: 6px; padding: 8px 12px; cursor: pointer;
+  }
+</style>
+
+<button id="mza-chat-btn" onclick="document.getElementById('mza-chat-box').style.display =
+  document.getElementById('mza-chat-box').style.display === 'flex' ? 'none' : 'flex'">💬</button>
+
+<div id="mza-chat-box">
+  <div id="mza-chat-header">Maleykə haqqında soruş</div>
+  <div id="mza-chat-messages">
+    <div class="msg">Salam! Maleykə haqqında nə bilmək istəyirsiniz?</div>
+  </div>
+  <div id="mza-chat-input-row">
+    <input id="mza-chat-input" placeholder="Sualınızı yazın..." />
+    <button id="mza-chat-send">Göndər</button>
+  </div>
+</div>
+
+<script>
+  const MZA_BACKEND_URL = "https://maleyka-ai.onrender.com/api/chat";
+
+  const mzaInput = document.getElementById("mza-chat-input");
+  const mzaSend = document.getElementById("mza-chat-send");
+  const mzaMessages = document.getElementById("mza-chat-messages");
+
+  async function mzaSendMessage() {
+    const text = mzaInput.value.trim();
+    if (!text) return;
+    mzaMessages.innerHTML += `<div class="msg user">${text}</div>`;
+    mzaInput.value = "";
+    mzaMessages.scrollTop = mzaMessages.scrollHeight;
+
+    try {
+      const res = await fetch(MZA_BACKEND_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text })
+      });
+      const data = await res.json();
+      mzaMessages.innerHTML += `<div class="msg">${data.reply || "Xəta baş verdi."}</div>`;
+    } catch (e) {
+      mzaMessages.innerHTML += `<div class="msg">Bağlantı xətası. Bir az sonra yenidən cəhd edin.</div>`;
+    }
+    mzaMessages.scrollTop = mzaMessages.scrollHeight;
+  }
+
+  mzaSend.addEventListener("click", mzaSendMessage);
+  mzaInput.addEventListener("keypress", (e) => { if (e.key === "Enter") mzaSendMessage(); });
+</script>
+<!-- ==== AI CHAT ASSISTANT WIDGET (son) ==== -->
+
 </body>
 </html>
-
-
