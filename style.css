@@ -1,21 +1,22 @@
 /* ==========================================================================
    Portfolio Theme: Modern Black & Luxury Green
    Author: Maleyka Musazada
-   Structure: Clean, Minimalist, and Professional
+   Design: Minimalist, Elegant, and Professional
    ========================================================================== */
 
-/* --- 1. Variables & Reset --- */
+/* --- 1. Variables & Base Styles --- */
 :root {
   /* Color Palette */
   --bg-color: #000000;          /* Pure Black Background */
-  --card-bg: #111111;           /* Slightly lighter black for containers */
-  --text-main: #F0F0F0;         /* Off-white for high readability */
-  --text-muted: #A0A0A0;        /* Medium gray for secondary text */
+  --card-bg: #0A3D29;           /* Deep Emerald Green for containers */
+  --text-main: #FFFFFF;         /* Pure White */
+  --text-muted: #A0A0A0;        /* Light Gray for secondary text */
   --accent-color: #00E676;      /* Vibrant Luxury Green for highlights */
-  --border-color: #222222;      /* Subtle dark gray for borders */
+  --border-color: #1A1A1A;       /* Dark gray for subtle borders */
 
   /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', serif; /* Elegant serif for name */
   --base-size: 16px;
   --line-height: 1.6;
 }
@@ -30,68 +31,75 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
-  font-family: var(--font-family);
+  font-family: var(--font-sans);
   font-size: var(--base-size);
   line-height: var(--line-height);
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* Better font rendering on dark */
 }
 
 /* --- 2. Layout & Reusable Components --- */
-
-/* Main container to constrain content width */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Section spacing */
-section {
-  padding: 40px 0;
-}
-
 /* --- 3. Header & Navigation --- */
 header {
-  background-color: var(--card-bg);
+  background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   padding: 20px 0;
-  position: sticky;
+  position: sticky; /* Keeps header at top on scroll */
   top: 0;
   z-index: 1000;
 }
 
 .nav-wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
 }
 
-/* Brand Identity (Monogram + Name) */
+/* Responsive adjustments for header */
+@media (min-width: 768px) {
+  .nav-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Brand Identity */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
+/* Monogram: Outline only, no background */
 .monogram {
-  background-color: var(--accent-color);
-  color: #000000;
-  width: 40px;
-  height: 40px;
+  background-color: transparent;
+  color: var(--text-main);
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.brand-name {
   font-weight: 600;
   font-size: 18px;
+  letter-spacing: -0.5px;
+  border: 2px solid var(--text-main); /* White outline */
+  flex-shrink: 0;
+}
+
+/* Brand Name: Elegant Serif Font */
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 28px; /* Adjusted for balance */
   color: var(--text-main);
   text-decoration: none;
+  font-weight: 400;
 }
 
 /* Navigation Links */
@@ -99,15 +107,17 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
   color: var(--text-muted);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   transition: color 0.2s ease;
-  padding-bottom: 4px; /* Space for the underline */
+  padding-bottom: 4px;
 }
 
 nav a:hover,
@@ -117,41 +127,39 @@ nav a.active {
 }
 
 /* --- 4. Main Content Area --- */
-
-/* Hero Section / Intro */
-.hero {
-  padding: 80px 0;
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .eyebrow {
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--accent-color);
   margin-bottom: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* The main statement/quote */
+/* The main claim/quote box - now Emerald Green */
 .claim-box {
   background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--accent-color);
+  border: none;
   padding: 40px;
-  border-radius: 12px;
-  font-size: 28px;
-  font-weight: 700;
+  border-radius: 16px;
+  font-size: 26px;
+  font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 24px;
-  max-width: 900px;
+  margin-bottom: 40px;
 }
 
-/* Sub-intro text */
-.intro-text {
+/* Proof/Description text */
+.proof {
   color: var(--text-muted);
   font-size: 18px;
-  max-width: 750px;
   margin-bottom: 60px;
+  max-width: 800px;
 }
 
 /* Section Headings */
@@ -163,8 +171,6 @@ h2 {
 }
 
 /* --- 5. Grid Systems & Cards --- */
-
-/* Grid for feature blocks */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -172,7 +178,7 @@ h2 {
   margin-bottom: 60px;
 }
 
-/* Standard Card Styling */
+/* Navigation Cards - now Emerald Green */
 .nav-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -186,14 +192,14 @@ h2 {
 
 .nav-card:hover {
   border-color: var(--accent-color);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 /* Card Category/Eyebrow */
 .nav-card .k {
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: var(--accent-color);
   margin-bottom: 12px;
   font-weight: 600;
@@ -214,16 +220,24 @@ h2 {
   line-height: 1.5;
 }
 
-/* Call to Action Strip */
+/* Call to Action Strip - now Emerald Green */
 .cta-strip {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   padding: 30px;
   border-radius: 12px;
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+}
+
+@media (min-width: 600px) {
+  .cta-strip {
+    flex-direction: row;
+  }
 }
 
 .cta-strip span {
@@ -234,13 +248,14 @@ h2 {
 
 .cta-btn {
   background-color: var(--accent-color);
-  color: #000000;
+  color: var(--bg-color);
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
   transition: opacity 0.2s ease;
+  text-align: center;
 }
 
 .cta-btn:hover {
@@ -248,13 +263,11 @@ h2 {
 }
 
 /* --- 6. Contact Section & Footer --- */
-
 .contact-section {
   border-top: 1px solid var(--border-color);
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
-/* Contact Form Layout */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -263,17 +276,16 @@ h2 {
   margin-top: 30px;
 }
 
-/* Form Inputs */
 input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
   padding: 16px;
-  background-color: var(--card-bg);
+  background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-main);
-  font-family: var(--font-family);
+  font-family: var(--font-sans);
   font-size: 15px;
   transition: border-color 0.2s ease;
 }
@@ -290,10 +302,9 @@ textarea {
   height: 120px;
 }
 
-/* Submit Button */
 button.submit-btn {
   background-color: var(--accent-color);
-  color: #000000;
+  color: var(--bg-color);
   border: none;
   padding: 16px 32px;
   border-radius: 8px;
@@ -301,14 +312,12 @@ button.submit-btn {
   font-size: 15px;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  align-self: flex-start; /* Don't stretch the button */
 }
 
 button.submit-btn:hover {
   opacity: 0.9;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 40px 0;
@@ -316,58 +325,4 @@ footer {
   margin-top: 60px;
   color: var(--text-muted);
   font-size: 14px;
-}
-
-/* --- 7. Responsive Design (Mobile) --- */
-@media (max-width: 768px) {
-  /* General adjustments */
-  .container {
-    padding: 0 16px;
-  }
-
-  /* Header stacking */
-  .nav-wrap {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  nav ul {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* Hero adjustments */
-  .hero {
-    padding: 40px 0;
-  }
-
-  .claim-box {
-    font-size: 22px;
-    padding: 24px;
-  }
-
-  .intro-text {
-    font-size: 16px;
-  }
-
-  /* CTA Strip stacking */
-  .cta-strip {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .cta-btn {
-    width: 100%;
-  }
-  
-  /* Form adjustments */
-  .contact-form {
-    max-width: 100%;
-  }
-  
-  button.submit-btn {
-    width: 100%;
-  }
 }
