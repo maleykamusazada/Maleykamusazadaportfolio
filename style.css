@@ -1,40 +1,55 @@
-/* --- Luxury Cream and Tiffany Green Design (English) --- */
+/* --- Modern Qara və Lüks Yaşıl Portfel Dizaynı --- */
 
 :root {
-  --bg-cream: #F8F6F0;          /* Soft cream background */
-  --card-bg: #FFFFFF;           /* Clean white card background */
-  --tiffany-green: #1B4D3E;     /* Deep and elegant Tiffany green */
-  --tiffany-light: #2E7D63;     /* Hover and accent tone */
-  --text-main: #2C2C2C;         /* Readable dark text */
-  --text-muted: #6B7280;        /* Secondary muted text */
-  --border-color: #E6E2D8;      /* Elegant border line */
+  --bg-dark: #0B0F0C;           /* Dərin və canlı modern qara arxa fon */
+  --card-bg: #141A16;           /* Qutular üçün tünd və zərif qara-yaşıl ton */
+  --card-hover: #1B241F;        /* Hover zamanı qutu tonu */
+  --luxury-green: #00FF88;      /* Çox canlı və parıldayan lüks yaşıl (Vurğular üçün) */
+  --luxury-green-dim: #10B981;  /* Yumşaq lüks yaşıl ton */
+  --text-main: #F3F4F6;         /* Parlaq ağ/gümüşü oxunaqlı mətn */
+  --text-muted: #9CA3AF;        /* İkinci dərəcəli gümüşü mətn */
+  --border-color: #223028;      /* Zərif və uyğunlaşdırılmış tünd yaşıl-qara haşiyə */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-cream);
+  background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 header {
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 2rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  padding: 1rem;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   max-width: 1100px;
   margin: 0 auto;
+  align-items: center;
+}
+
+@media(min-width: 768px) {
+  .nav-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .brand {
@@ -44,16 +59,18 @@ header {
 }
 
 .monogram {
-  background-color: var(--tiffany-green);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--luxury-green), var(--luxury-green-dim));
+  color: #0B0F0C;
   width: 38px;
   height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
 }
 
 .brand-name {
@@ -62,126 +79,156 @@ header {
   font-size: 1rem;
 }
 
-/* Compact and clean navigation */
+/* Səliqəli və sığışan menyu */
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 16px;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
   text-decoration: none;
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  padding: 4px 6px;
+  white-space: nowrap;
 }
 
 nav a.active, nav a:hover {
-  color: var(--tiffany-green);
-  border-bottom: 2px solid var(--tiffany-green);
-  padding-bottom: 2px;
+  color: var(--luxury-green);
+  border-bottom: 2px solid var(--luxury-green);
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
 
 main {
   max-width: 900px;
-  margin: 3.5rem auto;
-  padding: 0 1.5rem;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .eyebrow {
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--tiffany-green);
+  color: var(--luxury-green);
   margin-bottom: 12px;
   font-weight: 700;
 }
 
-/* Main Claim Box (Tiffany green background with white text) */
+/* Əsas Canlı Sitat Qutusu (Lüks yaşıl gradient fonda tünd yazı) */
 .claim-box {
-  background-color: var(--tiffany-green);
+  background: linear-gradient(135deg, #00FF88, #10B981);
   border: none;
-  color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 14px;
-  font-size: 1.8rem;
-  font-weight: 700;
+  color: #0B0F0C;
+  padding: 2.2rem;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 800;
   line-height: 1.3;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 25px rgba(27, 77, 62, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+  width: 100%;
+}
+
+@media(min-width: 768px) {
+  .claim-box {
+    font-size: 1.8rem;
+    padding: 2.5rem;
+  }
 }
 
 .proof {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
   max-width: 800px;
 }
 
 h2 {
-  color: var(--tiffany-green);
-  font-size: 1.5rem;
+  color: var(--luxury-green);
+  font-size: 1.4rem;
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   font-weight: 700;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
   margin-top: 1.5rem;
 }
 
-/* Elegant card design */
+@media(min-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Lüks Qutular */
 .nav-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-left: 4px solid var(--tiffany-green);
-  padding: 1.5rem;
-  border-radius: 10px;
+  border-left: 4px solid var(--luxury-green);
+  padding: 1.25rem;
+  border-radius: 12px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 100%;
 }
 
 .nav-card:hover {
-  border-color: var(--tiffany-light);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(27, 77, 62, 0.08);
+  background: var(--card-hover);
+  border-color: var(--luxury-green);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
 }
 
 .nav-card .k {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .nav-card .t {
-  color: var(--tiffany-green);
+  color: var(--luxury-green);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .cta-strip {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
-  margin: 3rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@media(min-width: 600px) {
+  .cta-strip {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .cta-strip span {
@@ -190,19 +237,23 @@ h2 {
 }
 
 .cta-btn {
-  background-color: var(--tiffany-green);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--luxury-green), var(--luxury-green-dim));
+  color: #0B0F0C;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s;
+  font-weight: 800;
+  transition: all 0.2s;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.25);
 }
 
 .cta-btn:hover {
-  background-color: var(--tiffany-light);
+  opacity: 0.9;
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 255, 136, 0.4);
 }
 
 .contact-section form {
@@ -220,16 +271,17 @@ h2 {
   color: var(--text-main);
   outline: none;
   font-family: inherit;
+  width: 100%;
 }
 
 .contact-section input:focus, .contact-section textarea:focus {
-  border-color: var(--tiffany-green);
-  box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.1);
+  border-color: var(--luxury-green);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.25);
 }
 
 footer {
   text-align: center;
-  padding: 2.5rem;
+  padding: 2rem 1rem;
   color: var(--text-muted);
   font-size: 13px;
   border-top: 1px solid var(--border-color);
