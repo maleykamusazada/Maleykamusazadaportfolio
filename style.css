@@ -162,3 +162,49 @@ button:hover, .btn:hover {
 .chat-input-area input:focus {
   border-color: var(--accent-gold);
 }
+/* --- BÜTÜN RƏNGLƏRİ SOLĞUN BOZ VƏ QIZILIYA ÇEVİRMƏK ÜÇÜN --- */
+
+:root {
+  --bg-color: #f7f7f5 !important;
+  --text-color: #4a4a4a !important;
+  --accent-gold: #b39258 !important;
+  --light-gold: #d4bc91 !important;
+  --card-bg: #ffffff !important;
+  --border-color: #e2e2df !important;
+}
+
+/* Səhifənin ümumi fonu və mətni */
+body, html {
+  background-color: #f7f7f5 !important;
+  color: #4a4a4a !important;
+}
+
+/* Şəkildə gördüyünüz tünd yaşıl sitat qutusunu solğun boz/qızılı etmək */
+div, section, article {
+  /* Əgər arxa fon tünd yaşıl rəngdədirsə, onu ağ və ya solğun boza çevirir */
+  background-color: inherit; 
+}
+
+/* Tünd yaşıl fonlu elementləri hədəfləyirik (Sitat qutusu üçün) */
+[style*="background"], .hero-box, .quote-box {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e2df !important;
+  color: #4a4a4a !important;
+}
+
+/* Şəkildəki bənövşəyi chat düyməsini qızılı rəngə çevirmək */
+.chat-widget-button, button, .chat-icon, [class*="chat"] {
+  background-color: #b39258 !important;
+  color: #ffffff !important;
+}
+
+/* Başlıqlar və vurğular */
+h1, h2, h3, h4, h5, h6 {
+  color: #b39258 !important;
+}
+
+/* Aktiv menyu alt xətti */
+nav a.active, .nav-link.active {
+  border-bottom-color: #b39258 !important;
+  color: #b39258 !important;
+}
