@@ -1,27 +1,31 @@
-/* --- SOFT GRAY & ELEGANT GOLD PALETTE --- */
+/* --- LUXURY DARK & GOLD MODERN DESIGN --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap');
 
 :root {
-  --bg-color: #f7f7f5;        /* Soft, muted light gray background */
-  --text-color: #4a4a4a;      /* Dark gray readable text */
-  --accent-gold: #b39258;     /* Elegant pale gold */
-  --light-gold: #d4bc91;      /* Lighter gold for hover effects */
-  --card-bg: #ffffff;         /* Clean white for cards/sections */
-  --border-color: #e2e2df;    /* Subtle border lines */
+  --bg-dark: #0a0a0a;          /* Deep rich black background */
+  --card-dark: #141414;        /* Dark gray/black for containers */
+  --gold-primary: #d4af37;     /* Elegant metallic gold */
+  --gold-light: #f3e5ab;       /* Soft glowing gold for highlights */
+  --text-black: #111111;       /* Deep black for specific high-contrast text */
+  --text-muted: #b0b0b0;       /* Muted gray for secondary text */
+  --border-gold: #3d3417;      /* Subtle dark gold border */
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 
 header {
-  background-color: var(--card-bg);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1rem 2rem;
+  background-color: var(--card-dark);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 1.2rem 2rem;
+  backdrop-filter: blur(10px);
 }
 
 .nav-wrap {
@@ -35,170 +39,194 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .monogram {
-  background-color: var(--accent-gold);
-  color: white;
-  width: 36px;
-  height: 36px;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+  color: var(--text-black);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
 }
 
 .brand-name {
-  font-weight: bold;
-  color: var(--text-color);
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.1rem;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 24px;
   margin: 0;
   padding: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-muted);
   font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 nav a.active, nav a:hover {
-  color: var(--accent-gold);
-  border-bottom: 2px solid var(--accent-gold);
+  color: var(--gold-primary);
+  border-bottom: 2px solid var(--gold-primary);
+  padding-bottom: 2px;
 }
 
 main {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 3.5rem auto;
   padding: 0 1.5rem;
 }
 
 .eyebrow {
-  font-size: 13px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent-gold);
-  margin-bottom: 10px;
-  font-weight: 600;
+  color: var(--gold-primary);
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-/* Replaced the old dark green box with a clean gray/gold card style */
+/* Sitat qutusu: Qızılı fon, qara mətn */
 .claim-box {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--accent-gold);
-  color: var(--text-color);
-  padding: 2rem;
-  border-radius: 8px;
-  font-size: 1.25rem;
+  background: linear-gradient(135deg, #d4af37, #aa8c2c);
+  border: none;
+  color: var(--text-black);
+  padding: 2.5rem;
+  border-radius: 12px;
+  font-size: 1.35rem;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
+  font-weight: 600;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
 }
 
 .proof {
-  color: #666;
-  margin-bottom: 2.5rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  line-height: 1.7;
 }
 
 h2 {
-  color: var(--accent-gold);
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.4rem;
-  margin-top: 2rem;
+  color: var(--gold-primary);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--border-gold);
+  padding-bottom: 0.6rem;
+  margin-top: 3rem;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  margin-top: 1rem;
+  gap: 16px;
+  margin-top: 1.5rem;
 }
 
 .nav-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 1.2rem;
-  border-radius: 8px;
+  background: var(--card-dark);
+  border: 1px solid var(--border-gold);
+  padding: 1.5rem;
+  border-radius: 10px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .nav-card:hover {
-  border-color: var(--accent-gold);
+  border-color: var(--gold-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0,0, 0.4);
 }
 
 .nav-card .k {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 
 .nav-card .t {
-  color: var(--accent-gold);
-  font-weight: bold;
+  color: var(--gold-light);
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .cta-strip {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 2rem 0;
+  background: var(--card-dark);
+  border: 1px solid var(--border-gold);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
 }
 
-.cta-btn {
-  background-color: var(--accent-gold);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
+.cta-strip span {
+  color: #ffffff;
   font-weight: 500;
 }
 
+.cta-btn {
+  background-color: var(--gold-primary);
+  color: var(--text-black);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
 .cta-btn:hover {
-  background-color: var(--light-gold);
+  background-color: var(--gold-light);
 }
 
 .contact-section form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 1rem;
+  gap: 14px;
+  margin-top: 1.5rem;
 }
 
 .contact-section input, .contact-section textarea {
-  padding: 0.8rem;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  background: var(--card-bg);
-  color: var(--text-color);
+  padding: 1rem;
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  background: var(--card-dark);
+  color: #ffffff;
   outline: none;
+  font-family: inherit;
 }
 
 .contact-section input:focus, .contact-section textarea:focus {
-  border-color: var(--accent-gold);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
 footer {
   text-align: center;
-  padding: 2rem;
-  color: #777;
-  font-size: 14px;
-  border-top: 1px solid var(--border-color);
-  background: var(--card-bg);
+  padding: 2.5rem;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border-gold);
+  background: var(--card-dark);
 }
+
