@@ -347,6 +347,71 @@ main h2 {
   border-bottom: 1px solid var(--hairline);
 }
 
+main > p {
+  color: var(--text-muted);
+  font-size: 15.5px;
+  max-width: 720px;
+  margin: 0 0 48px;
+}
+
+/* ---------- Books section (Profile page) ---------- */
+.books-intro {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  max-width: 680px;
+  margin: -8px 0 32px !important;
+}
+
+.book-category {
+  margin-bottom: 36px;
+}
+
+.book-category-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.book-category-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 4px 28px;
+}
+
+.book-item {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.book-item .b-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.book-item .b-author {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
 /* ---------- Card grid ---------- */
 .card-grid {
   display: grid;
