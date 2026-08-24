@@ -234,6 +234,109 @@ main {
   .assistant-card { width: 100%; flex-basis: auto; }
 }
 
+/* ---------- Case studies (Experience page) ---------- */
+.case {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 28px 26px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.case-lead { border-color: var(--gold); }
+
+.lead-tag {
+  position: absolute;
+  top: -11px; left: 22px;
+  background: var(--gold);
+  color: #14140A;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.case .title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+  margin: 4px 0 18px;
+}
+
+.case .beat-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 18px 0 6px;
+}
+
+.case p { color: var(--text-muted); font-size: 14.5px; margin: 0 0 4px; }
+
+.visual-card {
+  margin-top: 20px;
+  background: var(--bg);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 18px 18px 14px;
+}
+
+.visual-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.visual-caption {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.data-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--hairline);
+  padding: 8px 10px;
+}
+
+.data-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--text);
+}
+
+.data-table tr.flag-low td { color: var(--gold-bright); }
+.data-table tr.flag-mid td:nth-child(3) { color: var(--gold); }
+
+main h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
 main h2 {
   font-family: var(--font-display);
   font-weight: 600;
@@ -374,4 +477,3 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
-
