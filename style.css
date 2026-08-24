@@ -58,23 +58,26 @@ header {
 .brand { display: flex; align-items: center; gap: 12px; }
 
 .monogram {
-  width: 40px; height: 40px;
-  border: 1px solid var(--gold);
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold) 70%);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--gold);
-  font-size: 15px;
+  font-weight: 700;
+  color: #14140A;
+  font-size: 16px;
+  box-shadow: 0 0 18px rgba(201, 162, 39, 0.35);
 }
 
 .brand-name {
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 19px;
-  letter-spacing: 0.2px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.3px;
   color: var(--text);
 }
+
+.brand-name .accent { color: var(--gold); }
 
 nav ul {
   list-style: none;
@@ -371,3 +374,4 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
