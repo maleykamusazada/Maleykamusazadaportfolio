@@ -1,545 +1,330 @@
 /* =========================================================
-
    MALEYKA PORTFOLIO — GLOBAL DESIGN RESTORE
-
    ========================================================= */
 
 html,
-
 body {
-
   background: #0A0A08 !important;
-
   color: #F5F1E8 !important;
-
 }
 
 body {
-
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-
   line-height: 1.6;
-
 }
 
 header {
-
   background: rgba(10, 10, 8, 0.92) !important;
-
   border-bottom: 1px solid #2A2A20 !important;
-
   backdrop-filter: blur(10px);
-
 }
 
 .nav-wrap {
-
   max-width: 1100px !important;
-
   margin: 0 auto !important;
-
   padding: 18px 24px !important;
-
   display: flex !important;
-
   align-items: center !important;
-
   justify-content: space-between !important;
-
   gap: 20px;
-
 }
 
 .brand {
-
   display: flex !important;
-
   align-items: center !important;
-
   gap: 12px !important;
-
 }
 
 .monogram {
-
   width: 42px !important;
-
   height: 42px !important;
-
   min-width: 42px !important;
-
   border-radius: 50% !important;
-
   background: linear-gradient(
-
     135deg,
-
     #E8C547,
-
     #C9A227 70%
-
   ) !important;
-
   color: #14140A !important;
-
   display: flex !important;
-
   align-items: center !important;
-
   justify-content: center !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
   font-weight: 700 !important;
-
   box-shadow: 0 0 18px rgba(201,162,39,.35);
-
 }
 
 .brand-name {
-
   font-family: 'Fraunces', Georgia, serif !important;
-
   font-weight: 700 !important;
-
   font-size: 20px !important;
-
   color: #F5F1E8 !important;
-
 }
 
 .brand-name .accent {
-
   color: #C9A227 !important;
-
 }
 
 nav ul {
-
   display: flex !important;
-
   align-items: center !important;
-
   gap: 28px !important;
-
   list-style: none !important;
-
   margin: 0 !important;
-
   padding: 0 !important;
-
 }
 
 nav a {
-
   color: #9C9784 !important;
-
   font-family: 'JetBrains Mono', monospace !important;
-
   font-size: 12px !important;
-
   text-transform: uppercase !important;
-
   letter-spacing: .06em !important;
-
   text-decoration: none !important;
-
   border-bottom: 1px solid transparent !important;
-
   padding-bottom: 4px !important;
-
 }
 
 nav a:hover,
-
 nav a.active {
-
   color: #E8C547 !important;
-
   border-bottom-color: #C9A227 !important;
-
 }
 
 main {
-
   max-width: 1100px !important;
-
   margin: 0 auto !important;
-
   padding: 64px 24px 40px !important;
-
 }
 
 h1,
-
 h2,
-
 h3,
-
 h4 {
-
   font-family: 'Fraunces', Georgia, serif !important;
-
   color: #F5F1E8 !important;
-
 }
 
 main h1 {
-
   font-size: clamp(34px, 5vw, 52px) !important;
-
 }
 
 main h2 {
-
   font-size: 26px !important;
-
   border-bottom: 1px solid #2A2A20 !important;
-
 }
 
 p {
-
   color: #9C9784;
-
 }
 
 .eyebrow {
-
   color: #C9A227 !important;
-
   font-family: 'JetBrains Mono', monospace !important;
-
 }
 
 .hero-title {
-
   font-family: 'Fraunces', Georgia, serif !important;
-
   color: #F5F1E8 !important;
-
 }
 
 .hero-title span {
-
   color: #C9A227 !important;
-
 }
 
 .proof {
-
   color: #9C9784 !important;
-
 }
 
 .assistant-card {
-
   background: #14140F !important;
-
   border: 1px solid #2A2A20 !important;
-
   border-radius: 14px !important;
-
 }
 
 .assistant-status {
-
   color: #9C9784 !important;
-
   font-family: 'JetBrains Mono', monospace !important;
-
 }
 
 .assistant-orb {
-
   background: radial-gradient(
-
     circle at 35% 30%,
-
     #E8C547,
-
     #C9A227 60%,
-
     #6b5416 100%
-
   ) !important;
-
 }
 
 .assistant-name {
-
   color: #F5F1E8 !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
 }
 
 .assistant-desc {
-
   color: #9C9784 !important;
-
 }
 
 .card-grid {
-
   display: grid !important;
-
   grid-template-columns: repeat(
-
     auto-fit,
-
     minmax(220px, 1fr)
-
   ) !important;
-
   gap: 14px !important;
-
 }
 
 .nav-card {
-
   background: #14140F !important;
-
   border: 1px solid #2A2A20 !important;
-
   border-radius: 10px !important;
-
   padding: 24px 22px !important;
-
   text-decoration: none !important;
-
 }
 
 .nav-card:hover {
-
   background: #1C1C15 !important;
-
   border-color: #C9A227 !important;
-
 }
 
 .nav-card .k {
-
   color: #9C9784 !important;
-
   font-family: 'JetBrains Mono', monospace !important;
-
 }
 
 .nav-card .t {
-
   color: #E8C547 !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
 }
 
 .case {
-
   background: #14140F !important;
-
   border: 1px solid #2A2A20 !important;
-
   border-radius: 12px !important;
-
 }
 
 .case-lead {
-
   border-color: #C9A227 !important;
-
 }
 
 .case .title {
-
   color: #F5F1E8 !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
 }
 
 .case p {
-
   color: #9C9784 !important;
-
 }
 
 .visual-card {
-
   background: #0A0A08 !important;
-
   border-color: #2A2A20 !important;
-
 }
 
 .data-table {
-
   color: #F5F1E8 !important;
-
 }
 
 .data-table th {
-
   color: #C9A227 !important;
-
 }
 
 .data-table td {
-
   color: #F5F1E8 !important;
-
   border-color: #2A2A20 !important;
-
 }
 
 .book-item {
-
   border-color: #2A2A20 !important;
-
 }
 
 .book-item .b-title {
-
   color: #F5F1E8 !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
 }
 
 .book-item .b-author {
-
   color: #9C9784 !important;
-
 }
 
 .cta-strip {
-
   background: linear-gradient(
-
     135deg,
-
     #16160F,
-
     #0F0F0A
-
   ) !important;
-
   border: 1px solid #2A2A20 !important;
-
 }
 
 .cta-strip span {
-
   color: #F5F1E8 !important;
-
   font-family: 'Fraunces', Georgia, serif !important;
-
 }
 
 .cta-btn {
-
   background: #C9A227 !important;
-
   color: #14140A !important;
-
   border-radius: 7px !important;
-
   font-weight: 700 !important;
-
 }
 
 .cta-btn:hover {
-
   background: #E8C547 !important;
-
 }
 
 .contact-section input,
-
 .contact-section textarea {
-
   background: #14140F !important;
-
   color: #F5F1E8 !important;
-
   border: 1px solid #2A2A20 !important;
-
 }
 
 .contact-section input:focus,
-
 .contact-section textarea:focus {
-
   border-color: #C9A227 !important;
-
 }
 
 footer {
-
   color: #9C9784 !important;
-
   border-top: 1px solid #2A2A20 !important;
-
 }
 
 /* MOBILE */
-
 @media (max-width: 700px) {
-
   .nav-wrap {
-
     padding: 14px 18px !important;
-
   }
 
   .brand-name {
-
     font-size: 17px !important;
-
   }
 
   nav ul {
-
     gap: 12px 16px !important;
-
   }
 
   nav a {
-
     font-size: 9px !important;
-
   }
 
   main {
-
     padding: 48px 18px 32px !important;
-
   }
 
   .hero-row {
-
     flex-direction: column !important;
-
   }
 
   .assistant-card {
-
     width: 100% !important;
-
   }
 
   .card-grid {
-
     grid-template-columns: 1fr !important;
-
   }
 
   .cta-strip {
-
     align-items: flex-start !important;
-
     flex-direction: column !important;
-
   }
-
 }
