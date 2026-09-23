@@ -4,21 +4,865 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
+<title>Projects — Maleyka Musazada</title>
 
-    name="description"
+<meta name="description"
 
-    content="Projects by Maleyka Musazada — HR, HR Analytics, AI, research and digital products."
+content="Selected HR, HR Analytics, AI and Digital Product projects by Maleyka Musazada.">
 
-  />
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <title>Projects — Maleyka Musazada</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+  --bg:#050705;
+
+  --surface:#0b0d09;
+
+  --surface2:#10120d;
+
+  --line:#282a20;
+
+  --gold:#d7a928;
+
+  --gold2:#f1c94f;
+
+  --text:#f2efe7;
+
+  --muted:#aaa99f;
+
+  --mono:"JetBrains Mono",monospace;
+
+  --sans:"Inter",sans-serif;
+
+  --serif:"Fraunces",serif;
+
+}
+
+*{
+
+  box-sizing:border-box;
+
+}
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+body{
+
+  margin:0;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:var(--sans);
+
+}
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+.container{
+
+  width:min(1120px,calc(100% - 48px));
+
+  margin:auto;
+
+}
+
+/* NAV */
+
+header{
+
+  height:76px;
+
+  border-bottom:1px solid var(--line);
+
+  background:rgba(5,7,5,.94);
+
+  display:flex;
+
+  align-items:center;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:20;
+
+  backdrop-filter:blur(12px);
+
+}
+
+.nav{
+
+  width:min(1120px,calc(100% - 48px));
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+}
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-family:var(--serif);
+
+  font-size:17px;
+
+  font-weight:600;
+
+}
+
+.brand-mark{
+
+  width:34px;
+
+  height:34px;
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
+  background:var(--gold2);
+
+  color:#111;
+
+  font-family:var(--mono);
+
+  font-size:11px;
+
+  font-weight:700;
+
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:27px;
+
+  align-items:center;
+
+}
+
+.nav-links a{
+
+  font-family:var(--mono);
+
+  font-size:9px;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  color:#aaa99f;
+
+  padding:29px 0 26px;
+
+  border-bottom:2px solid transparent;
+
+}
+
+.nav-links a:hover,
+
+.nav-links a.active{
+
+  color:var(--gold2);
+
+  border-bottom-color:var(--gold2);
+
+}
+
+/* HERO */
+
+.projects-hero{
+
+  padding:70px 0 38px;
+
+}
+
+.eyebrow{
+
+  color:var(--gold2);
+
+  font-family:var(--mono);
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  margin-bottom:20px;
+
+}
+
+.eyebrow:before{
+
+  content:"";
+
+  display:inline-block;
+
+  width:20px;
+
+  height:1px;
+
+  background:var(--gold2);
+
+  vertical-align:middle;
+
+  margin-right:10px;
+
+}
+
+.projects-hero h1{
+
+  margin:0;
+
+  font-family:var(--serif);
+
+  font-size:58px;
+
+  line-height:1;
+
+  letter-spacing:-2px;
+
+}
+
+.projects-hero h1 span{
+
+  color:var(--gold2);
+
+}
+
+.projects-hero p{
+
+  max-width:590px;
+
+  color:var(--muted);
+
+  font-size:15px;
+
+  line-height:1.7;
+
+  margin-top:22px;
+
+}
+
+/* PROJECT CARDS */
+
+.project{
+
+  border:1px solid #3a351f;
+
+  border-radius:10px;
+
+  background:
+
+    radial-gradient(circle at 80% 15%,rgba(215,169,40,.05),transparent 35%),
+
+    linear-gradient(145deg,#0a0c08,#070906);
+
+  padding:26px;
+
+  margin:16px 0;
+
+}
+
+.project-grid{
+
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  gap:35px;
+
+  align-items:center;
+
+}
+
+.project.reverse .project-grid{
+
+  grid-template-columns:.9fr 1.1fr;
+
+}
+
+.project-label{
+
+  font-family:var(--mono);
+
+  font-size:10px;
+
+  letter-spacing:1.5px;
+
+  color:#99978c;
+
+  text-transform:uppercase;
+
+  margin-bottom:14px;
+
+}
+
+.project-label span{
+
+  color:var(--gold2);
+
+}
+
+.project h2{
+
+  margin:0 0 6px;
+
+  font-family:var(--serif);
+
+  font-size:34px;
+
+}
+
+.project h3{
+
+  margin:0 0 12px;
+
+  color:var(--gold2);
+
+  font-family:var(--mono);
+
+  font-size:10px;
+
+  letter-spacing:1.5px;
+
+  text-transform:uppercase;
+
+}
+
+.project p{
+
+  color:#b5b4aa;
+
+  line-height:1.65;
+
+  font-size:13px;
+
+  max-width:570px;
+
+}
+
+.features{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px 15px;
+
+  margin:18px 0;
+
+}
+
+.features span{
+
+  color:#d2d0c6;
+
+  font-size:11px;
+
+}
+
+.features span:not(:last-child):after{
+
+  content:"|";
+
+  color:var(--gold);
+
+  margin-left:15px;
+
+}
+
+/* MOCKUP */
+
+.mockup{
+
+  min-height:210px;
+
+  border:1px solid #39382c;
+
+  border-radius:10px;
+
+  background:#11130e;
+
+  padding:13px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  box-shadow:0 15px 45px rgba(0,0,0,.35);
+
+}
+
+.mockup-screen{
+
+  width:100%;
+
+  height:170px;
+
+  border-radius:7px;
+
+  border:1px solid #292b22;
+
+  background:
+
+    linear-gradient(145deg,#171a12,#0c0e0b);
+
+  padding:17px;
+
+}
+
+.mock-header{
+
+  height:10px;
+
+  width:45%;
+
+  background:var(--gold);
+
+  opacity:.75;
+
+  border-radius:3px;
+
+  margin-bottom:20px;
+
+}
+
+.mock-title{
+
+  font-family:var(--serif);
+
+  font-size:22px;
+
+  margin-bottom:18px;
+
+}
+
+.mock-title span{
+
+  color:var(--gold2);
+
+}
+
+.mock-cards{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:8px;
+
+}
+
+.mock-card{
+
+  height:55px;
+
+  border:1px solid #2b2d24;
+
+  border-radius:5px;
+
+  background:#10120e;
+
+}
+
+.buttons{
+
+  display:flex;
+
+  gap:12px;
+
+  margin-top:20px;
+
+}
+
+.btn{
+
+  display:inline-block;
+
+  padding:11px 17px;
+
+  border-radius:6px;
+
+  border:1px solid var(--gold);
+
+  font-size:11px;
+
+  font-weight:600;
+
+}
+
+.btn.primary{
+
+  background:var(--gold2);
+
+  color:#111;
+
+}
+
+.btn:hover{
+
+  transform:translateY(-1px);
+
+}
+
+/* META */
+
+.meta{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  border:1px solid #292b23;
+
+  border-radius:7px;
+
+  margin-top:20px;
+
+  overflow:hidden;
+
+}
+
+.meta div{
+
+  padding:13px 15px;
+
+  border-right:1px solid #292b23;
+
+}
+
+.meta div:last-child{
+
+  border-right:0;
+
+}
+
+.meta small{
+
+  display:block;
+
+  color:var(--gold2);
+
+  font-family:var(--mono);
+
+  font-size:8px;
+
+  letter-spacing:1.3px;
+
+  margin-bottom:7px;
+
+}
+
+.meta span{
+
+  font-size:10px;
+
+  color:#c0beb5;
+
+  line-height:1.5;
+
+}
+
+/* RESEARCH */
+
+.research{
+
+  margin-top:22px;
+
+}
+
+.research-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:10px;
+
+  margin-top:20px;
+
+}
+
+.research-item{
+
+  border:1px solid #292b23;
+
+  background:#0d0f0b;
+
+  padding:15px;
+
+  border-radius:6px;
+
+  font-size:11px;
+
+  color:#c4c2b8;
+
+}
+
+.research-item strong{
+
+  display:block;
+
+  color:var(--gold2);
+
+  font-family:var(--mono);
+
+  font-size:9px;
+
+  margin-bottom:7px;
+
+  text-transform:uppercase;
+
+}
+
+.impact{
+
+  margin-top:15px;
+
+  border:1px solid #55451d;
+
+  padding:16px;
+
+  border-radius:6px;
+
+}
+
+.impact small{
+
+  color:var(--gold2);
+
+  font-family:var(--mono);
+
+  font-size:8px;
+
+  letter-spacing:1px;
+
+}
+
+.impact strong{
+
+  display:block;
+
+  font-family:var(--serif);
+
+  font-size:20px;
+
+  margin-top:5px;
+
+}
+
+/* CTA */
+
+.cta{
+
+  margin:35px 0 30px;
+
+  padding:25px 28px;
+
+  border:1px solid var(--gold);
+
+  border-radius:9px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:20px;
+
+}
+
+.cta h2{
+
+  margin:0;
+
+  color:var(--gold2);
+
+  font-family:var(--serif);
+
+  font-size:25px;
+
+}
+
+.cta p{
+
+  margin:6px 0 0;
+
+  color:#aaa99f;
+
+  font-size:12px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  padding:30px 0 50px;
+
+  text-align:center;
+
+  color:#77766e;
+
+  font-family:var(--mono);
+
+  font-size:9px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .container{
+
+    width:min(100% - 28px,600px);
+
+  }
+
+  header{
+
+    height:auto;
+
+    padding:15px 0;
+
+  }
+
+  .nav{
+
+    width:calc(100% - 28px);
+
+  }
+
+  .nav-links{
+
+    display:none;
+
+  }
+
+  .projects-hero{
+
+    padding:45px 0 25px;
+
+  }
+
+  .projects-hero h1{
+
+    font-size:43px;
+
+  }
+
+  .project{
+
+    padding:18px;
+
+  }
+
+  .project-grid,
+
+  .project.reverse .project-grid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+  }
+
+  .project h2{
+
+    font-size:29px;
+
+  }
+
+  .mockup{
+
+    order:-1;
+
+  }
+
+  .meta{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .meta div{
+
+    border-right:0;
+
+    border-bottom:1px solid #292b23;
+
+  }
+
+  .meta div:last-child{
+
+    border-bottom:0;
+
+  }
+
+  .research-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .cta{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+  }
+
+  .cta h2{
+
+    font-size:22px;
+
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -26,885 +870,501 @@
 
 <header>
 
-  <div class="nav-wrap">
+  <nav class="nav">
 
-    <div class="brand">
+    <a href="index.html" class="brand">
 
-      <div class="monogram">MM</div>
+      <span class="brand-mark">MM</span>
 
-      <div class="brand-name">
-
-        Maleyka <span class="accent">Musazada</span>
-
-      </div>
-
-    </div>
-
-    <nav>
-
-      <ul>
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="experience.html">Experience</a></li>
-
-        <li><a href="profile.html">Profile &amp; Vision</a></li>
-
-        <li><a href="education.html">Education</a></li>
-
-        <li><a href="skills.html">Skills</a></li>
-
-        <li><a href="projects.html" class="active">Projects</a></li>
-
-      </ul>
-
-    </nav>
-
-  </div>
-
-</header>
-
-<main>
-
-  <!-- ================= HERO ================= -->
-
-  <section class="projects-hero">
-
-    <div class="eyebrow">
-
-      Selected Work
-
-    </div>
-
-    <h1>
-
-      Things I've Built
-
-    </h1>
-
-    <p>
-
-      I combine HR domain knowledge, analytics, AI-assisted research
-
-      and hands-on product development to build practical digital solutions.
-
-    </p>
-
-  </section>
-
-  <!-- ================= PROJECT 01 ================= -->
-
-  <section class="project-card featured">
-
-    <div class="project-featured-label">
-
-      Featured Digital Product
-
-    </div>
-
-    <div class="project-number">
-
-      Project 01
-
-    </div>
-
-    <h2>
-
-      YouDidIt.az
-
-    </h2>
-
-    <div class="project-subtitle">
-
-      Career &amp; Education Digital Platform
-
-    </div>
-
-    <p>
-
-      A self-developed digital platform combining career development,
-
-      assessment systems, educational resources and interactive tools.
-
-      The project was designed and developed as a practical digital
-
-      product rather than a simple portfolio website.
-
-    </p>
-
-    <div class="project-section-label">
-
-      What it includes
-
-    </div>
-
-    <div class="project-features">
-
-      <div class="project-feature">
-
-        <div class="feature-number">01</div>
-
-        <strong>CV Builder</strong>
-
-        <span>
-
-          Create and structure professional CVs.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">02</div>
-
-        <strong>ATS Analysis</strong>
-
-        <span>
-
-          Analyse CV compatibility with recruitment requirements.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">03</div>
-
-        <strong>Career Tools</strong>
-
-        <span>
-
-          Salary, interview and career-development resources.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">04</div>
-
-        <strong>HR &amp; Psychology Tests</strong>
-
-        <span>
-
-          Interactive assessment and self-evaluation tools.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">05</div>
-
-        <strong>Language Exams</strong>
-
-        <span>
-
-          Interactive language assessment resources.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">06</div>
-
-        <strong>Academic &amp; Logic Tests</strong>
-
-        <span>
-
-          Educational, academic and reasoning resources.
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="project-meta">
-
-      <div class="meta-box">
-
-        <span class="meta-label">
-
-          Product Type
-
-        </span>
-
-        <div class="meta-value">
-
-          Career, HR &amp; Education Platform
-
-        </div>
-
-      </div>
-
-      <div class="meta-box">
-
-        <span class="meta-label">
-
-          Development
-
-        </span>
-
-        <div class="meta-value">
-
-          Concept → Design → Development → Deployment
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="visual-card">
-
-      <div class="visual-label">
-
-        Product Stack
-
-      </div>
-
-      <table class="data-table">
-
-        <thead>
-
-          <tr>
-
-            <th>Layer</th>
-
-            <th>Technology / Focus</th>
-
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          <tr>
-
-            <td>Frontend</td>
-
-            <td>HTML + CSS + JavaScript</td>
-
-          </tr>
-
-          <tr>
-
-            <td>Product Design</td>
-
-            <td>UI / UX + Information Architecture</td>
-
-          </tr>
-
-          <tr>
-
-            <td>Assessment</td>
-
-            <td>Interactive Test Systems</td>
-
-          </tr>
-
-          <tr>
-
-            <td>Focus</td>
-
-            <td>Career + HR + Education</td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-      <div class="visual-caption">
-
-        Built from concept and content to interface, functionality
-
-        and deployment.
-
-      </div>
-
-    </div>
-
-    <div class="tech-tags">
-
-      <span class="tech-tag">Digital Product</span>
-
-      <span class="tech-tag">Career Technology</span>
-
-      <span class="tech-tag">HR Technology</span>
-
-      <span class="tech-tag">Education</span>
-
-      <span class="tech-tag">Interactive Tools</span>
-
-    </div>
-
-    <div class="project-links">
-
-      <a
-
-        class="project-link primary"
-
-        href="https://youdidit.az"
-
-        target="_blank"
-
-        rel="noopener"
-
-      >
-
-        Live Website ↗
-
-      </a>
-
-      <a
-
-        class="project-link"
-
-        href="https://github.com/maleykamusazada/youdidit.az"
-
-        target="_blank"
-
-        rel="noopener"
-
-      >
-
-        View on GitHub
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ================= PROJECT 02 ================= -->
-
-  <section class="project-card">
-
-    <div class="project-number">
-
-      Project 02 · HR Technology
-
-    </div>
-
-    <h2>
-
-      HR Mate
-
-    </h2>
-
-    <div class="project-subtitle">
-
-      AI-Powered HR Toolkit
-
-    </div>
-
-    <p>
-
-      A web application designed to bring practical HR tools into one
-
-      digital workspace — from CV screening and interview preparation
-
-      to KPI frameworks, 360° feedback and HR reference resources.
-
-    </p>
-
-    <div class="project-section-label">
-
-      What it does
-
-    </div>
-
-    <div class="project-features">
-
-      <div class="project-feature">
-
-        <div class="feature-number">01</div>
-
-        <strong>CV Screening</strong>
-
-        <span>
-
-          Scores candidate CVs against a job description and highlights
-
-          strengths and gaps.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">02</div>
-
-        <strong>Interview Bank</strong>
-
-        <span>
-
-          200+ questions organised across multiple HR and business functions.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">03</div>
-
-        <strong>KPI Frameworks</strong>
-
-        <span>
-
-          SMART, OKR and Balanced Scorecard frameworks.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">04</div>
-
-        <strong>360° Evaluation</strong>
-
-        <span>
-
-          Interactive performance evaluation framework.
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="visual-card">
-
-      <div class="visual-label">
-
-        Technology Stack
-
-      </div>
-
-      <table class="data-table">
-
-        <thead>
-
-          <tr>
-
-            <th>Layer</th>
-
-            <th>Choice</th>
-
-          </tr>
-
-        </thead>
-
-        <tbody>
-
-          <tr>
-
-            <td>Frontend</td>
-
-            <td>React + Vite</td>
-
-          </tr>
-
-          <tr>
-
-            <td>Document Parsing</td>
-
-            <td>mammoth.js</td>
-
-          </tr>
-
-          <tr>
-
-            <td>Deployment</td>
-
-            <td>Vercel</td>
-
-          </tr>
-
-        </tbody>
-
-      </table>
-
-      <div class="visual-caption">
-
-        Built solo — from concept and content through to a deployed,
-
-        working HR product.
-
-      </div>
-
-    </div>
-
-    <div class="tech-tags">
-
-      <span class="tech-tag">React</span>
-
-      <span class="tech-tag">Vite</span>
-
-      <span class="tech-tag">HR Technology</span>
-
-      <span class="tech-tag">AI</span>
-
-      <span class="tech-tag">mammoth.js</span>
-
-    </div>
-
-    <div class="project-links">
-
-      <a
-
-        class="project-link primary"
-
-        href="https://hr-mate.vercel.app"
-
-        target="_blank"
-
-        rel="noopener"
-
-      >
-
-        Live Demo ↗
-
-      </a>
-
-      <a
-
-        class="project-link"
-
-        href="https://github.com/maleykamusazada/hr-mate"
-
-        target="_blank"
-
-        rel="noopener"
-
-      >
-
-        View on GitHub
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ================= PROJECT 03 ================= -->
-
-  <section class="project-card">
-
-    <div class="project-number">
-
-      Project 03 · HR Analytics
-
-    </div>
-
-    <h2>
-
-      HR Analytics Dashboard
-
-    </h2>
-
-    <div class="project-subtitle">
-
-      Workforce Data → Visual Insights
-
-    </div>
-
-    <p>
-
-      An HR analytics dashboard developed to transform employee data
-
-      into structured visual insights and support workforce-related
-
-      decision making.
-
-    </p>
-
-    <div class="project-section-label">
-
-      Focus Areas
-
-    </div>
-
-    <div class="project-features">
-
-      <div class="project-feature">
-
-        <div class="feature-number">01</div>
-
-        <strong>Workforce Metrics</strong>
-
-        <span>
-
-          Structured employee and workforce-level indicators.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">02</div>
-
-        <strong>Data Analysis</strong>
-
-        <span>
-
-          Analysis and interpretation of HR datasets.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">03</div>
-
-        <strong>Dashboard Design</strong>
-
-        <span>
-
-          Visual presentation of workforce insights.
-
-        </span>
-
-      </div>
-
-      <div class="project-feature">
-
-        <div class="feature-number">04</div>
-
-        <strong>Decision Support</strong>
-
-        <span>
-
-          Turning raw HR data into understandable information.
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <div class="tech-tags">
-
-      <span class="tech-tag">Excel</span>
-
-      <span class="tech-tag">HR Analytics</span>
-
-      <span class="tech-tag">Data Visualization</span>
-
-      <span class="tech-tag">Dashboard Design</span>
-
-    </div>
-
-  </section>
-
-  <!-- ================= PROJECT 04 ================= -->
-
-  <section class="project-card">
-
-    <div class="project-number">
-
-      Project 04 · AI &amp; Research
-
-    </div>
-
-    <h2>
-
-      Weekly HR / ESG Industry Brief
-
-    </h2>
-
-    <div class="project-subtitle">
-
-      Structured HR &amp; ESG Research Workflow
-
-    </div>
-
-    <p>
-
-      A structured weekly research workflow designed to track important
-
-      developments across HR Analytics, ESG Regulation, AI in HR,
-
-      Compensation Trends and Sustainability Reporting.
-
-    </p>
-
-    <div class="project-section-label">
-
-      Research Areas
-
-    </div>
-
-    <div class="research-grid">
-
-      <div class="research-item">
-
-        <span>01</span>
-
-        HR Analytics
-
-      </div>
-
-      <div class="research-item">
-
-        <span>02</span>
-
-        ESG Regulation
-
-      </div>
-
-      <div class="research-item">
-
-        <span>03</span>
-
-        AI in HR
-
-      </div>
-
-      <div class="research-item">
-
-        <span>04</span>
-
-        Compensation Trends
-
-      </div>
-
-      <div class="research-item">
-
-        <span>05</span>
-
-        Sustainability Reporting
-
-      </div>
-
-    </div>
-
-    <div class="impact-box">
-
-      <div>
-
-        <div class="impact-label">
-
-          Workflow Impact
-
-        </div>
-
-        <div class="impact-value">
-
-          ~55–60 min → ~18–20 min
-
-        </div>
-
-      </div>
-
-      <div class="meta-value">
-
-        Structured research workflow
-
-      </div>
-
-    </div>
-
-    <p style="margin-top: 18px;">
-
-      The workflow was designed to reduce repetitive manual research
-
-      and create a more structured process for producing weekly briefs.
-
-    </p>
-
-    <div class="tech-tags">
-
-      <span class="tech-tag">AI-assisted Research</span>
-
-      <span class="tech-tag">HR Research</span>
-
-      <span class="tech-tag">ESG</span>
-
-      <span class="tech-tag">Automation</span>
-
-      <span class="tech-tag">Data Analysis</span>
-
-    </div>
-
-    <div class="project-links">
-
-      <a
-
-        class="project-link"
-
-        href="https://github.com/maleykamusazada/Maleykamusazadaportfolio"
-
-        target="_blank"
-
-        rel="noopener"
-
-      >
-
-        View Portfolio Repository ↗
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ================= FINAL CTA ================= -->
-
-  <section class="cta-strip">
-
-    <div>
-
-      <strong>
-
-        HR × Data × AI × Digital Products
-
-      </strong>
-
-      <span style="display:block; margin-top:6px; color:var(--text-muted); font-size:13px;">
-
-        Building practical solutions at the intersection of people and technology.
-
-      </span>
-
-    </div>
-
-    <a
-
-      class="cta-btn"
-
-      href="https://www.linkedin.com/in/maleyka-musazada-b9b483370"
-
-      target="_blank"
-
-      rel="noopener"
-
-    >
-
-      Connect on LinkedIn ↗
+      <span>Maleyka Musazada</span>
 
     </a>
 
-  </section>
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="experience.html">Experience</a>
+
+      <a href="profile.html">Profile & Vision</a>
+
+      <a href="education.html">Education</a>
+
+      <a href="skills.html">Skills</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="projects.html" class="active">Projects</a>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<main class="container">
+
+<section class="projects-hero">
+
+  <div class="eyebrow">Selected Work</div>
+
+  <h1>
+
+    Things I've <span>Built</span>
+
+  </h1>
+
+  <p>
+
+    I combine HR domain knowledge, analytics, AI-assisted research
+
+    and hands-on product development to build practical digital solutions.
+
+  </p>
+
+</section>
+
+<!-- PROJECT 01 -->
+
+<section class="project">
+
+  <div class="project-grid">
+
+    <div>
+
+      <div class="project-label">
+
+        <span>Featured Digital Product</span> &nbsp; Project 01
+
+      </div>
+
+      <h2>YouDidIt.az</h2>
+
+      <h3>Career & Education Digital Platform</h3>
+
+      <p>
+
+        A self-developed digital platform combining career development,
+
+        assessment systems, educational resources and interactive tools.
+
+        The project was designed and developed as a practical digital
+
+        product rather than a simple portfolio website.
+
+      </p>
+
+      <div class="features">
+
+        <span>CV Builder</span>
+
+        <span>ATS Analysis</span>
+
+        <span>Career Tools</span>
+
+        <span>HR & Psychology Tests</span>
+
+        <span>Language Exams</span>
+
+        <span>Academic & Logic Tests</span>
+
+      </div>
+
+      <div class="buttons">
+
+        <a class="btn primary" href="https://youdidit.az" target="_blank">
+
+          Live Website ↗
+
+        </a>
+
+        <a class="btn"
+
+           href="https://github.com/maleykamusazada/youdidit.az"
+
+           target="_blank">
+
+          View on GitHub
+
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="mockup">
+
+      <div class="mockup-screen">
+
+        <div class="mock-header"></div>
+
+        <div class="mock-title">
+
+          Build Your <span>Better Future</span>
+
+        </div>
+
+        <div class="mock-cards">
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="meta">
+
+    <div>
+
+      <small>Product Type</small>
+
+      <span>Career, HR & Education Platform</span>
+
+    </div>
+
+    <div>
+
+      <small>Development</small>
+
+      <span>Concept → Design → Development → Deployment</span>
+
+    </div>
+
+    <div>
+
+      <small>Tech Stack</small>
+
+      <span>HTML · CSS · JavaScript · UI/UX</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT 02 -->
+
+<section class="project reverse">
+
+  <div class="project-grid">
+
+    <div class="mockup">
+
+      <div class="mockup-screen">
+
+        <div class="mock-header"></div>
+
+        <div class="mock-title">
+
+          Smarter <span>HR</span>
+
+        </div>
+
+        <div class="mock-cards">
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="project-label">
+
+        Project 02 · HR Technology
+
+      </div>
+
+      <h2>HR Mate</h2>
+
+      <h3>AI-Powered HR Toolkit</h3>
+
+      <p>
+
+        A web application designed to bring practical HR tools into one
+
+        digital workspace — from CV screening and interview preparation
+
+        to KPI frameworks, 360° feedback and HR reference resources.
+
+      </p>
+
+      <div class="features">
+
+        <span>CV Screening</span>
+
+        <span>Interview Bank</span>
+
+        <span>KPI Frameworks</span>
+
+        <span>360° Evaluation</span>
+
+      </div>
+
+      <div class="buttons">
+
+        <a class="btn primary"
+
+           href="https://hrmate.vercel.app"
+
+           target="_blank">
+
+          Live Demo ↗
+
+        </a>
+
+        <a class="btn"
+
+           href="https://github.com/maleykamusazada"
+
+           target="_blank">
+
+          View on GitHub
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT 03 -->
+
+<section class="project">
+
+  <div class="project-grid">
+
+    <div>
+
+      <div class="project-label">
+
+        Project 03 · HR Analytics
+
+      </div>
+
+      <h2>HR Analytics Dashboard</h2>
+
+      <h3>Workforce Data → Visual Insights</h3>
+
+      <p>
+
+        An HR analytics dashboard developed to transform employee data
+
+        into structured visual insights and support workforce-related
+
+        decision making.
+
+      </p>
+
+      <div class="features">
+
+        <span>Workforce Metrics</span>
+
+        <span>Data Analysis</span>
+
+        <span>Dashboard Design</span>
+
+        <span>Decision Support</span>
+
+      </div>
+
+    </div>
+
+    <div class="mockup">
+
+      <div class="mockup-screen">
+
+        <div class="mock-header"></div>
+
+        <div class="mock-title">
+
+          Workforce <span>Overview</span>
+
+        </div>
+
+        <div class="mock-cards">
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="meta">
+
+    <div>
+
+      <small>Tech Stack</small>
+
+      <span>Excel · HR Analytics · Data Visualization</span>
+
+    </div>
+
+    <div>
+
+      <small>Focus</small>
+
+      <span>Workforce Metrics & Decision Support</span>
+
+    </div>
+
+    <div>
+
+      <small>Output</small>
+
+      <span>Interactive HR Dashboard</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT 04 -->
+
+<section class="project">
+
+  <div class="project-grid">
+
+    <div>
+
+      <div class="project-label">
+
+        Project 04 · AI & Research
+
+      </div>
+
+      <h2>Weekly HR / ESG Industry Brief</h2>
+
+      <h3>Structured HR & ESG Research Workflow</h3>
+
+      <p>
+
+        A structured weekly research workflow designed to track important
+
+        developments across HR Analytics, ESG Regulation, AI in HR,
+
+        Compensation Trends and Sustainability Reporting.
+
+      </p>
+
+      <div class="features">
+
+        <span>HR Analytics</span>
+
+        <span>ESG Regulation</span>
+
+        <span>AI in HR</span>
+
+        <span>Compensation Trends</span>
+
+        <span>Sustainability Reporting</span>
+
+      </div>
+
+      <div class="impact">
+
+        <small>Impact</small>
+
+        <strong>
+
+          ~55–60 min → ~18–20 min
+
+        </strong>
+
+      </div>
+
+    </div>
+
+    <div class="mockup">
+
+      <div class="mockup-screen">
+
+        <div class="mock-header"></div>
+
+        <div class="mock-title">
+
+          Weekly <span>Research</span>
+
+        </div>
+
+        <div class="mock-cards">
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+          <div class="mock-card"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div>
+
+    <h2>HR × Data × AI × Digital Products</h2>
+
+    <p>
+
+      Building practical solutions at the intersection of people and technology.
+
+    </p>
+
+  </div>
+
+  <a class="btn primary"
+
+     href="https://www.linkedin.com/"
+
+     target="_blank">
+
+    Connect on LinkedIn ↗
+
+  </a>
+
+</section>
 
 </main>
 
 <footer>
 
-  © 2026 Maleyka Musazada · Baku, Azerbaijan (Open to Remote)
+  © 2026 Maleyka Musazada · Baku, Azerbaijan · Open to Remote
 
 </footer>
 
